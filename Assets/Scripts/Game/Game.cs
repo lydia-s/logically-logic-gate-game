@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour {
-    public static int gridWidth = 3;// = 3;//3
-    public static int gridHeight = 6;// = 6;
+    //static variables
+    public static int gridWidth = 3;
+    public static int gridHeight = 6;
+    public static float fallSpeed = 1f;
+    public static string gameMode;
     public static Transform[,] grid= new Transform[gridWidth, gridHeight];
+    //non-static
     public int score = 0;
     public bool IsGameOver = false;
     public GameObject scorePopup;
@@ -15,8 +19,7 @@ public class Game : MonoBehaviour {
     private GameObject nextGate;
     private bool gameStarted = false;
     private Vector2 previewGatePos = new Vector2(8f, 5f);
-    public static float fallSpeed = 1f;
-    public static string gameMode;
+    
     
 
     // Use this for initialization
